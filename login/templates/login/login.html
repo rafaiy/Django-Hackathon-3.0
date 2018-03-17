@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+<title>Login Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="logincss/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="{% static 'register/style.css' %}">
+
+</style>
+</head>
+</head>
+
+<body>
+<!-- main -->
+	<div class="main">
+		<h1>Pollution Monetizer</h1>
+		<h3>User Login Form</h3><br>
+	 	<div class="main-w3lsrow">
+			<!-- login form -->
+			<div class="login-form login-form-left"> 
+				<div class="agile-row">
+					<div class="login-agileits-top"> 	
+						<form action="#" method="post">
+						{% csrf_token %}
+							<p>User Name </p><b>(aadhar card number is username)</b>
+							<input type="text" class="name" name="username" required=""/>
+							<p>Password</p>
+							<input type="password" class="password" name="password" required=""/>  
+							<br />
+
+							<label class="anim">
+								<input type="checkbox" class="checkbox">
+								<span> Remember me ?</span> 
+							</label>   
+							<input type="submit" value="Login" name="Submit">
+							</form>
+							<form action="/register/" method="post">
+							{% csrf_token %}
+							<input type="submit" value="New User?" name="Submit"> 
+
+						</form> 	
+					</div> 
+					<div class="login-agileits-bottom"> 
+						<h6><a href="#">Forgot password?</a></h6>
+					</div> 
+				</div>  
+			</div>  
+		</div>	
+		
+	</div>	
+	
+</body>
+</html>

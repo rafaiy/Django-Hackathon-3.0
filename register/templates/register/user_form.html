@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'register/style.css' %}">
+
+
+<title>Registration Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="logincss/style.css" rel="stylesheet" type="text/css" media="all" />
+</style>
+</head>
+</head>
+
+<body>
+<!-- main -->
+	<div class="main">
+		<h1>Pollution Monetizer</h1>
+		<h3>User Registration Form</h3><br>
+	 	<div class="main-w3lsrow">
+			<!-- login form -->
+			<div class="login-form login-form-left">
+				<div class="agile-row">
+					<div class="login-agileits-top">
+						<form action="/login" method="post">
+						{% csrf_token %}
+							<p>Name </p>
+							<input type="text" class="name" name="Name" required=""/>
+
+							<p>Father's Name </p>
+							<input type="text" class="name" name="Fname" required=""/>
+
+							<p>Mobile Number </p>
+							<input type="text" class="name" name="Mobile" required=""/>
+
+							<p>Aadhar Card Number</p>
+							<input type="text" class="name" name="Aadharno" required=""/>
+
+							<p>Birth Date</p>
+							<input type="date" class="name" name="Yob" required=""/>
+
+							<p>Gender</p>
+							<input type="radio" class="name" name="Gender" value="male" checked> Male <br>
+							<input type="radio" class="name" name="Gender" value="female"> Female <br>
+							<input type="radio" class="name" name="Gender" value="other" >other <br>
+							<br />
+
+							<p>Address</p>
+							<input type="text" class="name" name="Address" required=""/>
+							<br />
+							<p>Pincode</p>
+							<input type="text" class="name" name="Pincode" required=""/>
+							<br />
+
+							<p>Password</p>
+							<input type="password" class="password" name="Password" required=""/>
+							<br />
+
+							<p>Security Question</p>
+							<input type="text" class="name" name="securityqestion" required=""/>
+							<br />
+
+							<p>Answer</p>
+							<input type="text" class="name" name="answer" required=""/>
+
+							<input type="submit" value="Register" name="register">
+							<br />
+						    <br />
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+</html>
+
